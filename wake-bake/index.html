@@ -10,7 +10,7 @@
     <title>Wake & Bake</title>
 </head>
 
-<body>
+<body class="body body--opend-menu">
     <div class="wraper">
         <header class="header">
             <div class="header__top">
@@ -33,6 +33,9 @@
                                 </li>
                             </ul>
                         </nav>
+                        <a class="burger-icon" href="#">
+                            <span></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -45,12 +48,12 @@
                             </div>
                             <h1 class="hero__titel">Научись печь торты и десерты с нуля</h1>
                             <div class="hero__text">За 8 практических занятий ты получишь новые возможности для самореализации и любимое дело</div>
-                            <a class="button" href="#">Записаться на курс</a>
+                            <a class="hero__button button" href="#">Записаться на курс</a>
                         </div>
                         <div class="hero__img">
                             <img src="img/content/girl-1.png" alt="Девушка с тортом">
                             <div class="hero__img-control">
-                                <a class="hero__img-button" href="#"><img src="img/icon/play.svg" alt=""></a>
+                                <a class="hero__img-button" data-fslightbox href="video/keik.mp4"><img src="img/icon/play.svg" alt=""></a>
                                 Посмотри, как готовятся наши торты
                             </div>
                         </div>
@@ -63,6 +66,8 @@
         <footer class="footer"></footer>
 
     </div>
+    <script src="js/fslightbox.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
