@@ -383,11 +383,9 @@
 .footer__contact-item {
     margin-bottom: 10px;
 }
-
 .footer__contact-item:last-child {
     margin-bottom: 0;
 }
-
 .footer__contact-link {}
 
 .footer__col-tel {
@@ -400,7 +398,13 @@
     text-transform: uppercase;
     font-weight: 500;
     font-size: 24px;
+    transition: var(--transition);
 }
+
+.footer__col__number:hover {
+    color: var(--akcentnyy);
+}
+
 
 .footer__col-copy {
     color: #dec5b1;
@@ -410,18 +414,14 @@
 .socials {
     line-height: 0;
 }
-
 .socials__list {
     display: flex;
     gap: 17px;
 }
-
 .socials__item {}
-
 .socials__link path {
     transition: var(--transition);
 }
-
 .socials__link:hover path {
     fill: var(--akcentnyy);
 }
