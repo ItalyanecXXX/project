@@ -18,25 +18,39 @@
 
     }
 
+const btnOpen = document.querySelector('.about__img-button')
+const modal = document.querySelector('.modal')
+const bodyFixed = document.body
+
+
+const modalClose = () => {
+    modal.classList.remove('modal--opend')
+    bodyFixed.classList.remove('body--opend-modal')
+}
+
+const modalOpen = () => {
+    modal.classList.add('modal--opend')
+    bodyFixed.classList.add('body--opend-modal')
+} 
+
+
+btnOpen.addEventListener('click', modalOpen)
+
+modal.addEventListener('click', event => {
+    event.preventDefault()
+    const target = event.target
+    if (target.closest('.modal__close') || target.classList.contains('modal--opend')) {
+        modalClose()      
+    } else {
+        return
+    }
+})
+document.addEventListener('keydown', event => {
+    if (event.code === 'Escape' && modal.classList.contains('modal--opend')) {
+        modalClose()
+    }
+})
+
 })()
 
 
-
-
-// (function () {
-
-//     const burgerIcon = document.querySelector('.header__top-inner');
-//     const bodyMenu = document.body;
-//     const menuToggle = () => {
-//         bodyMenu.classList.toggle('body--opend-menu');
-//     }
-
-//     burgerIcon.addEventListener('click', event => {
-//         if (document.documentElement.clientWidth > 900) return
-//         const target = event.target
-//         if (target && target.classList.contains('header__nav-link') || target.classList.contains('burger-icon')) {
-//             menuToggle()
-//         }
-//     })
-
-// })()
