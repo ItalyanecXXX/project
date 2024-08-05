@@ -53,6 +53,8 @@
     height: 62px;
     padding: 3px 15px;
     width: 100%;
+    transition: var(--transition);
+
 }
 
 .button:hover {
@@ -100,13 +102,16 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    cursor: pointer;
 
 }
 
 .modal__close path,
 rect {
     stroke: #e1d9e1;
-}
+    transition: var(--transition);
+    
+} 
 
 .modal__close:hover path,
 .modal__close:hover rect {
@@ -146,6 +151,8 @@ rect {
 }
 
 .modal__form-input:focus {
+
+    border-color: var(--akcentnyy);
     padding: 26px 79px 12px 28px;
 }
 
@@ -160,16 +167,19 @@ rect {
     font-size: 15px;
 }
 
-.modal__input:hover {
+.modal__form-input:hover {
     border-color: var(--akcentnyy);
 
 }
 
-.modal__input::placeholder {
+.modal__form-input::placeholder {
     color: #ac907a;
 }
 
-.modal__input:hover::placeholder {
+.modal__form-input:hover::placeholder {
+    color: var(--akcentnyy);
+}
+.modal__form-input:focus::placeholder {
     color: var(--akcentnyy);
 }
 
@@ -395,7 +405,7 @@ rect {
     justify-content: center;
     width: 78px;
     height: 78px;
-    padding-left: 3%;
+    padding-left: 6px;
     border-radius: 100%;
     background: var(--fonovyy);
     box-shadow: 0 4px 20px 0 rgba(184, 148, 126, 0.3);
@@ -474,6 +484,7 @@ rect {
     background: var(--fonovyy-svetlyy);
     box-shadow: 0 4px 20px 0 rgba(184, 148, 126, 0.3);
     position: relative;
+    cursor: pointer;
 }
 
 
