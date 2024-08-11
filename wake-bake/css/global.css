@@ -46,7 +46,9 @@
     padding: 140px 0;
 }
 
-.main__program, .main__gallery {
+.main__program,
+.main__gallery,
+.main__testimonials {
     margin-bottom: 140px;
 }
 
