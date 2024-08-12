@@ -96,6 +96,7 @@
 
             const accordionControl = e.target.closest('.accordion-list__control');
             if (!accordionControl) return
+            e.preventDefault()
 
             const accordionItem = accordionControl.parentElement;
             const accordionContent = accordionControl.nextElementSibling;
@@ -171,11 +172,6 @@
         },
 
         breakpoints: {
-
-            // 601: {
-            //     slidesPerView: 3,
-            // },
-
             901: {
                 slidesPerView: 1.5,
             },
@@ -186,6 +182,12 @@
         }
     });
 
+    // маска для телефона
+    const telInputs = document.querySelectorAll('input[type="tel"]')
+    telInputs.forEach(element => {
+        const im = new Inputmask('+7 (999) 999-99-99')
+        im.mask(element)
+    });
 
 })()
 

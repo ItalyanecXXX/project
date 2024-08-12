@@ -6,6 +6,12 @@
     --fonovyy: #ffe0cb;
     --transition: all .4s;
     --border-radius: 20px;
+    --inputy:#ac907a;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 .body {
@@ -131,7 +137,7 @@ rect {
 
 .modal__close:hover path,
 .modal__close:hover rect {
-    stroke: #ac907a;
+    stroke: var(--inputy);
 }
 
 .modal__title {
@@ -156,7 +162,7 @@ rect {
     top: -16px;
     left: 28px;
     font-size: 11px;
-    color: #ac907a;
+    color: var(--inputy);
     opacity: 0;
     transition: var(--transition);
 }
@@ -174,7 +180,7 @@ rect {
 .modal__form-input {
     transition: var(--transition);
     width: 100%;
-    border: 1px solid #ac907a;
+    border: 1px solid var(--inputy);
     border-radius: 5px;
     padding: 19px 79px 19px 28px;
     margin-bottom: 10px;
@@ -188,7 +194,7 @@ rect {
 }
 
 .modal__form-input::placeholder {
-    color: #ac907a;
+    color: var(--inputy);
 }
 
 .modal__form-input:hover::placeholder {
